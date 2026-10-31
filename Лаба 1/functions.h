@@ -1,0 +1,17 @@
+#pragma once
+void showMainMenu();
+void viewAll();
+void addTeam();
+void addAthlete();
+void addCoachToTeam();
+void removeTeam();
+void removeAthlete();
+void removeCoachFromTeam();
+void editTeam();
+void editAthlete();
+void editCoach();
+void sortAthletes();
+void searchAthlete();
+void saveToFile();
+void loadFromFile();
+void cleanup();
