@@ -21,6 +21,7 @@ int main() {
         cout << "  1. Работа с VECTOR<Bug*>\n";
         cout << "  2. Работа с LIST<Vulnerability>\n";
         cout << "  3. Работа с ARRAY<Tester, 5>\n";
+        cout << "  4. Посмотреть список приложений (ID)\n";
         cout << "  0. Выход\n";
         ch = inputInt("  Выбор: ");
 
@@ -28,6 +29,7 @@ int main() {
         case 1: menuVector(); break;
         case 2: menuList();   break;
         case 3: menuArray();  break;
+        case 4: printApplications(); break;
         }
     } while (ch != 0);
 

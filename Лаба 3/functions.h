@@ -10,6 +10,8 @@ extern std::vector<Application*> appsVector; // vector: apps
 extern std::vector<Bug*> bugsVector; // vector: bugs
 extern std::list<Vulnerability> vulnerabilitiesList; // list: Vulnerabilities
 
+void printApplications();
+
 // helpers
 int inputInt(const std::string& prompt);
 std::string inputStr(const std::string& prompt);

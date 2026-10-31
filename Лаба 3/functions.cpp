@@ -14,12 +14,24 @@ vector<Application*> appsVector;
 vector<Bug*> bugsVector;
 list<Vulnerability> vulnerabilitiesList;
 
+void printApplications() {
+    cout << left << setw(10) << "ID" << "Название приложения" << endl;
+    cout << string(40, '-') << endl;
+    for (auto* a : appsVector) {
+        cout << left << setw(10) << a->getId() << a->getAppName() << endl;
+    }
+}
+
 // helpers
 int inputInt(const string& prompt) {
     int x;
     cout << prompt;
-    cin >> x;
-    cin.ignore();
+    while (!(cin >> x)) { // Пока ввод некорректный
+        cin.clear(); // Сбрасываем ошибку cin
+        cin.ignore(1000, '\n'); // Очищаем буфер от мусора
+        cout << "  [!] Ошибка! Введите ЧИСЛО: ";
+    }
+    cin.ignore(); // Убираем оставшийся Enter
     return x;
 }
 
